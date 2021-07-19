@@ -1,0 +1,132 @@
+
+ButtonTest.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000086  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  000000da  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000030  00000000  00000000  000000da  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000010c  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000038  00000000  00000000  00000148  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000005a5  00000000  00000000  00000180  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000519  00000000  00000000  00000725  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000029a  00000000  00000000  00000c3e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000064  00000000  00000000  00000ed8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000312  00000000  00000000  00000f3c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000000aa  00000000  00000000  0000124e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000028  00000000  00000000  000012f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	10 c0       	rjmp	.+32     	; 0x22 <__ctors_end>
+   2:	22 c0       	rjmp	.+68     	; 0x48 <__bad_interrupt>
+   4:	22 c0       	rjmp	.+68     	; 0x4a <__vector_2>
+   6:	20 c0       	rjmp	.+64     	; 0x48 <__bad_interrupt>
+   8:	1f c0       	rjmp	.+62     	; 0x48 <__bad_interrupt>
+   a:	1e c0       	rjmp	.+60     	; 0x48 <__bad_interrupt>
+   c:	1d c0       	rjmp	.+58     	; 0x48 <__bad_interrupt>
+   e:	1c c0       	rjmp	.+56     	; 0x48 <__bad_interrupt>
+  10:	1b c0       	rjmp	.+54     	; 0x48 <__bad_interrupt>
+  12:	1a c0       	rjmp	.+52     	; 0x48 <__bad_interrupt>
+  14:	19 c0       	rjmp	.+50     	; 0x48 <__bad_interrupt>
+  16:	18 c0       	rjmp	.+48     	; 0x48 <__bad_interrupt>
+  18:	17 c0       	rjmp	.+46     	; 0x48 <__bad_interrupt>
+  1a:	16 c0       	rjmp	.+44     	; 0x48 <__bad_interrupt>
+  1c:	15 c0       	rjmp	.+42     	; 0x48 <__bad_interrupt>
+  1e:	14 c0       	rjmp	.+40     	; 0x48 <__bad_interrupt>
+  20:	13 c0       	rjmp	.+38     	; 0x48 <__bad_interrupt>
+
+00000022 <__ctors_end>:
+  22:	11 24       	eor	r1, r1
+  24:	1f be       	out	0x3f, r1	; 63
+  26:	cf e5       	ldi	r28, 0x5F	; 95
+  28:	d1 e0       	ldi	r29, 0x01	; 1
+  2a:	de bf       	out	0x3e, r29	; 62
+  2c:	cd bf       	out	0x3d, r28	; 61
+
+0000002e <__do_copy_data>:
+  2e:	10 e0       	ldi	r17, 0x00	; 0
+  30:	a0 e6       	ldi	r26, 0x60	; 96
+  32:	b0 e0       	ldi	r27, 0x00	; 0
+  34:	e6 e8       	ldi	r30, 0x86	; 134
+  36:	f0 e0       	ldi	r31, 0x00	; 0
+  38:	02 c0       	rjmp	.+4      	; 0x3e <__SP_H__>
+  3a:	05 90       	lpm	r0, Z+
+  3c:	0d 92       	st	X+, r0
+  3e:	a0 36       	cpi	r26, 0x60	; 96
+  40:	b1 07       	cpc	r27, r17
+  42:	d9 f7       	brne	.-10     	; 0x3a <__do_copy_data+0xc>
+  44:	10 d0       	rcall	.+32     	; 0x66 <main>
+  46:	1d c0       	rjmp	.+58     	; 0x82 <_exit>
+
+00000048 <__bad_interrupt>:
+  48:	db cf       	rjmp	.-74     	; 0x0 <__vectors>
+
+0000004a <__vector_2>:
+	PORTA = (0<<LED1)|(1<<LED2);
+	delay(stime);
+}
+
+ISR(PCINT0_vect)
+{
+  4a:	1f 92       	push	r1
+  4c:	0f 92       	push	r0
+  4e:	0f b6       	in	r0, 0x3f	; 63
+  50:	0f 92       	push	r0
+  52:	11 24       	eor	r1, r1
+  54:	8f 93       	push	r24
+	PORTA = (1<<LED1);
+  56:	84 e0       	ldi	r24, 0x04	; 4
+  58:	8b bb       	out	0x1b, r24	; 27
+}
+  5a:	8f 91       	pop	r24
+  5c:	0f 90       	pop	r0
+  5e:	0f be       	out	0x3f, r0	; 63
+  60:	0f 90       	pop	r0
+  62:	1f 90       	pop	r1
+  64:	18 95       	reti
+
+00000066 <main>:
+
+int main(void)
+{
+	DDRA |= (1<<LED1)|(1<<LED2)|(0<<BUTM)|(0<<BUTP);
+  66:	8a b3       	in	r24, 0x1a	; 26
+  68:	8c 60       	ori	r24, 0x0C	; 12
+  6a:	8a bb       	out	0x1a, r24	; 26
+	PORTA |= (1<<BUTP)|(1<<BUTM);
+  6c:	8b b3       	in	r24, 0x1b	; 27
+  6e:	83 60       	ori	r24, 0x03	; 3
+  70:	8b bb       	out	0x1b, r24	; 27
+	PCMSK0 |= (1<<PCINT0)|(1<<PCINT1);
+  72:	82 b3       	in	r24, 0x12	; 18
+  74:	83 60       	ori	r24, 0x03	; 3
+  76:	82 bb       	out	0x12, r24	; 18
+	GIMSK |= (1<<PCINT0);
+  78:	8b b7       	in	r24, 0x3b	; 59
+  7a:	81 60       	ori	r24, 0x01	; 1
+  7c:	8b bf       	out	0x3b, r24	; 59
+	
+	
+	sei();
+  7e:	78 94       	sei
+  80:	ff cf       	rjmp	.-2      	; 0x80 <main+0x1a>
+
+00000082 <_exit>:
+  82:	f8 94       	cli
+
+00000084 <__stop_program>:
+  84:	ff cf       	rjmp	.-2      	; 0x84 <__stop_program>
