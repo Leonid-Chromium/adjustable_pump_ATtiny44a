@@ -1,14 +1,14 @@
 Archive member included to satisfy reference by file (symbol)
 
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25\libgcc.a(_exit.o)
-                              C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o (exit)
+                              C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o (exit)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25\libgcc.a(_copy_data.o)
                               main.o (__do_copy_data)
 
 Discarded input sections
 
- .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o
- .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o
+ .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -62,7 +62,7 @@ user_signatures  0x00850000         0x00000400         rw !x
 
 Linker script and memory map
 
-LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o
+LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o
 LOAD main.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25\libm.a
@@ -71,7 +71,7 @@ START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr25\libgcc.a
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25\libm.a
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25\libc.a
-LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25\libattiny44.a
+LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25\libattiny44a.a
 END GROUP
                 0x00000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
                 [0x00800060]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800060
@@ -175,7 +175,7 @@ END GROUP
 
 .text           0x00000000       0x7e
  *(.vectors)
- .vectors       0x00000000       0x22 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o
+ .vectors       0x00000000       0x22 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o
                 0x00000000                __vector_default
                 0x00000000                __vectors
  *(.vectors)
@@ -203,13 +203,13 @@ END GROUP
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x00000022        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o
+ .init0         0x00000022        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o
                 0x00000022                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x00000022        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o
+ .init2         0x00000022        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o
  *(.init2)
  *(.init3)
  *(.init3)
@@ -226,10 +226,10 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000044        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o
+ .init9         0x00000044        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o
  *(.init9)
  *(.text)
- .text          0x00000048        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o
+ .text          0x00000048        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o
                 0x00000048                __vector_1
                 0x00000048                __vector_12
                 0x00000048                __bad_interrupt
@@ -351,7 +351,7 @@ END GROUP
 .note.gnu.avr.deviceinfo
                 0x00000000       0x3c
  .note.gnu.avr.deviceinfo
-                0x00000000       0x3c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o
+                0x00000000       0x3c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
@@ -378,18 +378,18 @@ END GROUP
 
 .debug_info     0x00000000      0x59a
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x420 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o
+ .debug_info    0x00000000      0x420 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o
  .debug_info    0x00000420      0x17a main.o
 
 .debug_abbrev   0x00000000      0x501
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x3e8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o
+ .debug_abbrev  0x00000000      0x3e8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o
  .debug_abbrev  0x000003e8      0x119 main.o
 
-.debug_line     0x00000000      0x29d
+.debug_line     0x00000000      0x29c
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000       0xfe C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o
- .debug_line    0x000000fe      0x19f main.o
+ .debug_line    0x00000000       0xfd C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o
+ .debug_line    0x000000fd      0x19f main.o
 
 .debug_frame    0x00000000       0x44
  *(.debug_frame)
@@ -397,7 +397,7 @@ END GROUP
 
 .debug_str      0x00000000      0x312
  *(.debug_str)
- .debug_str     0x00000000      0x173 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44/avr25/crtattiny44.o
+ .debug_str     0x00000000      0x173 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.8.332/gcc/dev/attiny44a/avr25/crtattiny44a.o
  .debug_str     0x00000173      0x19f main.o
                                 0x1d3 (size before relaxing)
 
